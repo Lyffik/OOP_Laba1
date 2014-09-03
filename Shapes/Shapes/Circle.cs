@@ -1,10 +1,11 @@
-﻿namespace Shapes
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Shapes
 {
     class Circle:Shape
     {
-        public Circle() { }
-        public Circle(string name) : base(name) { }
-
+        public Circle(Graphics g) : base("Circle", g) { }
         public override void Draw()
         {
             

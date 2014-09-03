@@ -4,8 +4,7 @@ namespace Shapes
 {
     class Rectangle:Shape
     {
-        public Rectangle() { }
-        public Rectangle(string name) : base(name) { }
+        public Rectangle(Graphics g) : base("Rectangle",g) { }
 
         public override void Draw()
         {
