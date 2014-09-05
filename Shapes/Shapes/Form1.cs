@@ -30,13 +30,10 @@ namespace Shapes
         {
             Graphics graphics;
             graphics = pictureBox1.CreateGraphics();
-            Line line=new Line(graphics);
-            line.SetPoint(new Point(1, 1),new Point(100, 100));
-            line.Draw();
-            Elipse ecl=new Elipse(graphics);
-            ecl.Draw();
-            Rect rect=new Rect(graphics,new Rectangle(50,60,100,110));
-            rect.Draw();
+            ShapesList shapes=new ShapesList();
+            shapes.AddShape(new Line(graphics, new Point(1, 1), new Point(100, 100)));
+            shapes.AddShape(new Elipse(graphics, new RectangleF(50, 60, 100, 110)));
+            shapes.AddShape(new Rect(graphics, new Rectangle(50, 60, 100, 110)));
             graphics.Dispose();
         }
     }

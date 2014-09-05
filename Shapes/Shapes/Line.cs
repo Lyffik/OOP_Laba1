@@ -6,16 +6,16 @@ namespace Shapes
 {
      class Line:Shape
      {
-         private Point[] points=new Point[2];
-         public void SetPoint(Point p1, Point p2)
+         private Point point1, point2;
+
+         public Line(Graphics g, Point p1, Point p2) : base("Line", g)
          {
-             points[0] = p1;
-             points[1] = p2;
+             point1 = p1;
+             point2 = p2;
          }
-         public Line(Graphics g) : base("Line",g) { }
          public override void Draw()
          {
-             GraphicCanvas.DrawLine(pen, points[0], points[1]);
+             GraphicCanvas.DrawLine(pen, point1, point2);
          }
     }
 }
