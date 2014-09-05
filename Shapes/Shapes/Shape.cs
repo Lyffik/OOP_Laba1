@@ -8,13 +8,12 @@ namespace Shapes
   {
       protected Pen pen;
 
-      public Graphics GraphicCanvas { get; set; }
+      protected Graphics GraphicCanvas;
       public string ShapeName { get; set; }
       protected Shape(string name,Graphics g)
       {
           ShapeName = name;
           GraphicCanvas = g;
-          pen = new Pen(Color.Black);
       }
       public abstract void Draw();
   }

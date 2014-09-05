@@ -31,9 +31,11 @@ namespace Shapes
             Graphics graphics;
             graphics = pictureBox1.CreateGraphics();
             ShapesList shapes=new ShapesList();
-            shapes.AddShape(new Line(graphics, new Point(1, 1), new Point(100, 100)));
-            shapes.AddShape(new Elipse(graphics, new RectangleF(50, 60, 100, 110)));
-            shapes.AddShape(new Rect(graphics, new Rectangle(50, 60, 100, 110)));
+            shapes.AddShape(new MyLine(graphics, new Point(20, 5), new Point(70, 300)));
+            shapes.AddShape(new MyElipse(graphics, new Rectangle(70, 25, 100, 200)));
+            shapes.AddShape(new MyRectangle(graphics, new Rectangle(180, 25, 150, 200)));
+            shapes.AddShape(new MyPolygon(graphics, new Point[] { new Point(350, 25), new Point(410, 40), new Point(370, 100), new Point(400, 300), new Point(340, 320) }));
+            shapes.DrawListOfShapes();
             graphics.Dispose();
         }
     }
