@@ -2,14 +2,16 @@
 
 namespace Shapes
 {
-    class Rect:Shape
+    internal class Rect : Shape
     {
-        private Rectangle rect = new Rectangle(40, 40, 100, 150);
-        public Rect(Graphics g) : base("Rectangle",g) { }
-
+        private Rectangle rectangle;
+        public Rect(Graphics g, Rectangle rect) : base("Rectangle", g)
+        {
+            rectangle = rect;
+        }
         public override void Draw()
         {
-          GraphicCanvas.DrawRectangle(pen,rect);
+          GraphicCanvas.DrawRectangle(pen,rectangle);
 
         }
     }

@@ -35,7 +35,7 @@ namespace Shapes
             line.Draw();
             Elipse ecl=new Elipse(graphics);
             ecl.Draw();
-            Rect rect=new Rect(graphics);
+            Rect rect=new Rect(graphics,new Rectangle(50,60,100,110));
             rect.Draw();
             graphics.Dispose();
         }
