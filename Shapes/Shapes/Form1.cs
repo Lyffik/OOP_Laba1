@@ -28,10 +28,16 @@ namespace Shapes
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
-            Graphics g=pictureBox1.CreateGraphics();
-            Line line = new Line(g);
+            Graphics graphics;
+            graphics = pictureBox1.CreateGraphics();
+            Line line=new Line(graphics);
+            line.SetPoint(new Point(1, 1),new Point(100, 100));
             line.Draw();
+            Elipse ecl=new Elipse(graphics);
+            ecl.Draw();
+            Rect rect=new Rect(graphics);
+            rect.Draw();
+            graphics.Dispose();
         }
     }
 }

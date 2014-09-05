@@ -7,23 +7,15 @@ namespace Shapes
   abstract class Shape
   {
       protected Pen pen;
-      protected List<Point> pointsList;
-      public Color penColor
-      {
-          get { return pen.Color; }
-          set { pen.Color = value; }
-      }
+
       public Graphics GraphicCanvas { get; set; }
       public string ShapeName { get; set; }
-      public Shape(string name,Graphics g)
+      protected Shape(string name,Graphics g)
       {
           ShapeName = name;
           GraphicCanvas = g;
-          penColor = Color.DarkBlue;
-          pen=new Pen(penColor);
+          pen = new Pen(Color.Black);
       }
-      public virtual void Draw(List<Point> plist )
-      {
-      }
-    }
+      public abstract void Draw();
+  }
 }
